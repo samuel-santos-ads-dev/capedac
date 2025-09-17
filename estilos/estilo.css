@@ -1,0 +1,760 @@
+@charset "UTF-8";
+
+/*-----------------------------------------------------------------*/
+/*Formatações Universais*/
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Universal*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Variáveis*/
+
+:root {
+    /*Cores*/
+    --corvermelha : #B82D2E;
+    --corazul : #063C9B;
+    --corbranca : #f5f5f5;
+    --cortitulo1: #973f3f;
+    --cortitulo2: #284880;
+    --corartigo1 : #b82d2d21;
+    --corartigo2 : #063d9b21;
+    /**Fontes*/
+    --fontemonogoogle : "Google Sans Code", monospace;
+    --fonteparagrafos : "Helvetica", "Arial", sans-serif;
+    --fontetitulo : "Poppins", sans-serif;
+}
+
+/*-----------------------------------------------------------------*/
+
+body{
+    width: 100%;
+    font-family: var(--fontemonogoogle);
+}
+
+/*Modo Escuro*/
+body.modo-escuro {
+    background-color: #000;
+    color: #f5f5f5;
+}
+
+.modo-escuro .art1 button, .modo-escuro .art2 button{
+    box-shadow: 5px 5px 8px #f5f5f533;
+}
+
+ body.modo-escuro .modal-conteudo{
+    background-color: #000;
+ }
+
+/*Eventuais mudanças*/
+/* body.modo-escuro header {
+    background-image: linear-gradient(to bottom, #333, #555);
+} */
+
+/* body.modo-escuro .art1 {
+    background-color: rgba(184, 45, 46, 0.5);
+} */
+
+/* body.modo-escuro .art2 {
+    background-color: rgba(6, 60, 155, 0.5);
+} */
+
+/* body.modo-escuro footer {
+    background-image: linear-gradient(to bottom, #333, #555);
+} */
+
+body.modo-escuro a, body.modo-escuro p, body.modo-escuro h2, body.modo-escuro h1 {
+    color: var(--corbranca);
+}
+
+.alternar-tema {
+    display: flex;
+    position: absolute;
+    font-weight: 900;
+    font-size: 20px;
+    top: 15px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--corbranca);
+    color: var(--corvermelha);
+    transition: background-color 0.5s, color 0.5s, transform 0.5s;
+}
+
+.alternar-tema:hover {
+    background-color: var(--corvermelha);
+    color: var(--corbranca);
+    outline: 2px solid var(--corbranca);
+}
+
+/*Menu Hamburguer*/
+
+.menu-alternar {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.menu-alternar span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+}
+
+/* Cada listra com cor da CAPEDAC */
+.menu-alternar span:nth-child(1) {
+    background-color: var(--corazul);
+}
+.menu-alternar span:nth-child(2) {
+    background-color: var(--corbranca);
+}
+.menu-alternar span:nth-child(3) {
+    background-color: var(--corvermelha);
+}
+
+.menu-alternar.aberto span:nth-child(1) {
+    transform: rotate(45deg) translateY(14.5px);
+    background-color: var(--corbranca);
+}
+.menu-alternar.aberto span:nth-child(2) {
+    opacity: 0;
+}
+.menu-alternar.aberto span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-14.5px);
+    background-color: var(--corbranca);
+}
+
+/*------------------------------------------------------------*/
+/*Header*/
+
+header {
+    margin: auto;
+    height: auto;
+    background-image: linear-gradient(to bottom, var(--corvermelha), var(--corazul));
+    text-align: center;
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+    padding: 10px;
+    position: relative;
+}
+
+header ul {
+    text-align: left;
+}
+
+header li {
+    display: inline-block;
+    font-weight: 500;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+
+header li a {
+    color: var(--corbranca);
+}
+
+
+abbr, a {
+    text-decoration: none;
+}
+
+header li:hover {
+    background-color: var(--corvermelha);
+}
+
+header h1 {
+    display: inline-block;
+    font-family: var(--fontemonogoogle);
+    font-weight: 800;
+    font-size: 64px;
+    color: var(--corbranca);
+    
+}
+
+.logo-capedac {
+    padding-top: 10px;
+    padding-bottom: 4px;
+    max-width: 150px;
+    display: block;
+    margin: auto;
+}
+
+/*-----------------------------------------------------------*/
+/*Main*/
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+main p{
+    margin: auto;
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 29px;
+    font-family: var(--fonteparagrafos);
+    padding-right: 8px;
+}
+
+.itens-artigos {
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    border-radius: 15px 15px;
+    margin-bottom: 16px;
+}
+
+.art1 {
+    background-color: var(--corartigo1);
+}
+
+.art1 h2 {
+    color: var(--cortitulo1);
+    font-family: var(--fontetitulo);
+}
+.art1 button {
+    display: inline-block;
+    margin: 10px 0px;
+    background-color: var(--corvermelha);
+    color: var(--corbranca);
+    border: 2px solid var(--corvermelha);
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: 600; 
+    transition: 0.3s;
+    cursor: pointer;
+    font-family: var(--fontetitulo);
+}
+
+.art1 button:hover {
+    background-color: var(--corbranca); 
+    color: var(--corvermelha);
+    transform: translateY(-2px);
+    box-shadow: 7px 7px 10px rgba(184, 45, 46, 0.7);
+}
+
+.art2 {
+    background-color: var(--corartigo2);
+}
+
+.art2 h2 {
+    color: var(--cortitulo2);
+    font-family: var(--fontetitulo);
+}
+
+.art2 button {
+    display: inline-block;
+    margin: 10px 0px;
+    background-color: var(--corazul);
+    color: var(--corbranca);
+    border: 2px solid var(--corazul);
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: 600;
+    box-shadow: 5px 5px 8px rgba(6, 60, 155, 0.9);
+    transition: 0.3s;
+    cursor: pointer;
+    font-family: var(--fontetitulo);
+}
+
+.art2 button:hover {
+    background-color: var(--corbranca);
+    color: var(--corazul);
+    transform: translateY(-2px);
+    box-shadow: 7px 7px 10px rgba(6, 60, 155, 0.7);
+}
+
+.itens-artigos picture {
+    margin: auto;
+    display: block;
+    height: auto;
+}
+
+
+
+.itens-artigos article {
+    margin: auto;
+    display: block;
+}
+
+
+/*-----------------------------------------------------------*/
+/*Rodapé*/
+footer {
+    background: linear-gradient(to bottom, var(--corvermelha), var(--corazul));
+    color: var(--corbranca);
+    padding: 30px 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.rodape {
+    display: flex;
+    gap: 25px;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.rodape h3 {
+    font-family: var(--fontetitulo);
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.logo-rodape {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+
+.rodape-sobre p {
+    line-height: 1.7;
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+.rodape-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rodape-links li {
+    margin: 5px 0;
+}
+
+.rodape-links a {
+    color: var(--corbranca);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.rodape-links a:hover {
+    opacity: 0.7;
+    padding-left: 8px;
+}
+
+.rodape-contato p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.rodape-contato a {
+    color: var(--corbranca);
+    text-decoration: none;
+}
+
+.redes-sociais {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.redes-sociais img {
+    width: 28px;
+    height: 28px;
+    transition: 0.3s;
+}
+
+.redes-sociais img:hover {
+    transform: translateY(-8px);
+    filter: brightness(1.3);
+}
+
+.rodape-direitos {
+    display: block; 
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 10px;
+}
+/*Sobre a Capedac*/
+.endsemfor {
+    margin-left: 20px;
+    display: inline;
+    font-style: normal;
+    font-family: var(--fonteparagrafos);
+}
+
+address.endsemfor {
+    margin-left: -10px;
+}
+
+a.linkend {
+    color: var(--cortitulo2);
+    margin-left: 0;
+}
+
+address.endsemfor::before {
+    content: "\1F4CD";
+}
+
+address.endsemfor::after {
+    content: "\1F4CD";
+}
+
+
+/*Notícias*/
+.instagram {
+    border-radius: 15px 15px!important;
+    max-height: 400px;
+    overflow-y: scroll;   
+}
+
+/*Projetos*/
+.modalidades {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 25px;
+}
+.modalidades p {
+    text-indent: 0;
+}
+
+.modalidades h3 {
+    color: var(--cortitulo1);
+}
+
+.cartao{
+    margin: auto;
+    text-align: center;
+}
+.cartao i {
+    font-size: 50px;
+    color: var(--corvermelha);
+    margin-bottom: 15px;
+    transition: 0.9s;
+}
+
+.fa-spin {
+  animation: fa-spin 2s infinite linear !important;
+}
+
+.fa-bounce {
+  animation: fa-bounce 2s infinite linear !important;
+}
+
+.fa-shake {
+  animation: fa-shake 5s infinite linear !important;
+}
+
+.projetos h3 {
+    font-family: var(--fontetitulo);
+    color: var(--cortitulo2);
+}
+
+.projetos ul {
+    list-style-position: inside !important;
+    list-style: none;
+    
+}
+
+.projetos li::before {
+    content: "\267F";
+}
+
+.projetos li {
+    font-family: var(--fonteparagrafos);
+    padding: 5px 8px;
+    line-height: 1.4;
+}
+
+/*Contato*/
+
+
+/*Doação*/
+
+.modal {
+    display: none; /* escondido por padrão */
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caixa do popup */
+.modal-conteudo {
+    background-color: var(--corbranca);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 350px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: popup 0.4s ease;
+}
+
+.modal-conteudo p {
+    margin: 8px 0;
+    text-indent: 0;
+}
+
+.modal .fechar {
+    position: absolute;
+    top: 12px; right: 15px;
+    font-size: 27px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal .fechar:hover {
+    transform: scale(1.4);
+}
+
+.conteudo1 {
+    border: 2px solid var(--corvermelha);
+}
+
+.conteudo1 h3 {
+    color: var(--corvermelha);
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-family: var(--fontetitulo);
+}
+
+.conteudo1 .fechar {
+    color: var(--corazul);
+}
+
+.conteudo1 iframe {
+    border: 3px solid var(--corvermelha);
+}
+
+.conteudo2 {
+    border: 2px solid var(--corazul);
+}
+
+.conteudo2 h3 {
+    color: var(--corazul);
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-family: var(--fontetitulo);
+}
+
+.conteudo2 img {
+    max-width: 180px;
+    margin: 15px 0;
+    border: 3px solid var(--corazul);
+    border-radius: 12px;
+}
+
+.conteudo2 strong {
+    color: var(--corazul);
+}
+
+.conteudo2 .fechar {
+    color: var(--corvermelha);
+}
+
+.lista-doacao li {
+    list-style: none;
+    margin-left: 3%;
+    font-family: var(--fonteparagrafos);
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.lista-doacao li::before {
+    content: "\2705";
+}
+
+/* Animação suave */
+@keyframes popup {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+
+/*----------------------------------------------------------*/
+/*Configuração de resposavidade*/
+
+@media (max-width: 780px) {
+
+    header {
+        margin: auto;
+        width: 100%;
+    }
+    header ul {
+        text-align: left;
+    }
+    header h1 {
+        font-size: 36px;
+        padding-bottom: 10px;
+    }
+    .alternar-tema {
+        font-size: 15px;
+    }
+
+    .menu-alternar {
+        display: flex;
+    }
+
+    .lista {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to bottom, var(--corvermelha), var(--corazul));
+        padding: 15px;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .lista.ativa {
+        display: flex;
+    }
+
+    .lista li {
+        margin: auto;
+    }
+
+    .logo-capedac {
+        max-width: 100px;
+    }
+    .itens-artigos {
+        display: block;
+        flex-wrap: wrap;
+    }
+
+    .itens-artigos p {
+        padding-right: 16px;
+    }
+
+    .itens-artigos article {
+        margin: 10px;
+        width: 100%;
+        display: block;
+        height: auto;
+}   
+    .itens-artigos img {
+        display: block;
+        margin: auto;
+    }
+
+    /*Projetos*/
+    .modalidades {
+        flex-wrap: wrap;
+    }
+    .cartao i {
+        font-size: 40px;
+    }
+
+    /*Noticias*/
+    .itens-artigos.art1, .itens-artigos.art2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+}
+
+    .itens-artigos.art1 article, .itens-artigos.art2 article {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+
+    
+}
+
+    .instagram {
+        max-height: 200px;
+        overflow-y: scroll;
+        border-radius: 15px 15px;
+    }
+
+    .instagram .instagram-media {
+        width: 100% !important;
+        max-width: 316px !important;
+        min-width: 100px !important;
+        margin: 0 auto !important;
+        display: block !important;
+        box-sizing: border-box !important;
+    }
+
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+
+    .redes-sociais {
+        justify-content: center;
+    }
+    
+    .logo-rodape {
+        max-width: 70px;
+        display: block;
+        margin: auto;
+    }
+
+@media (max-width: 400px) {
+    .logo-capedac {
+        display: flex;
+        width: 40px;
+        position: absolute;
+        top: 5px;
+        left: 65px;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    header h1 {
+        margin-top: 0;
+        font-size: 32px;
+        display: flex;
+        position: absolute;
+        top: 17px;
+        left: 110px;
+    }
+}
+   
+}
+/*/* Força o botão do VLibras para o canto superior direito */
+/*[vw] .vw-access-button {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  left: auto !important;
+  bottom: auto !important;
+  z-index: 999999 !important;
+}/*
+
+
+
+
+
+

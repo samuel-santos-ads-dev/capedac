@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="CAPEDAC, doacao, contribuir, inclusao, acessibilidade, pessoas com deficiencia, Rio Branco, Acre">
+    <meta name="description" content="Contribua com a CAPEDAC e ajude a transformar vidas. Faça sua doação e apoie projetos de inclusão, esporte e acessibilidade para pessoas com deficiência no Acre.">
+    <link rel="stylesheet" href="../estilos/estilo.css">
+    <link rel="stylesheet" href="../estilos/all.min.css">
+    <link rel="shortcut icon" href="../midias/favicon.ico" type="image/x-icon">
+    <title>CAPEDAC - Doação</title>
+</head>
+<body>
+    <header>
+
+            <img src="../midias/capedac512-512.png" alt="Logo da CAPEDAC, Centro de Apoio à Pessoa com Deficiência do Acre, com símbolo de acessibilidade em cadeira de rodas" class="logo-capedac" title="Logo da CAPEDAC">
+            <h1 title="Centro de Apoio a Pessoa com Deficiência do Acre">CAPEDAC</h1>
+
+        <nav>
+            <ul class="lista">
+                <li class="item-lista">
+                    <abbr title="Página inicial">
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </abbr>
+                </li>
+                <li class="item-lista">
+                    <abbr title="Quem Somos?">
+                        <a href="sobre.html">
+                            Quem Somos?
+                        </a>
+                    </abbr>
+                </li>
+                <li class="item-lista">
+                    <abbr title="Notícias da CAPEDAC">
+                        <a href="noticias.html">
+                            Notícias
+                        </a>
+                    </abbr>
+                </li>
+                <li class="item-lista">
+                    <abbr title="Projetos">
+                        <a href="projetos.html">
+                            Projetos
+                        </a>
+                    </abbr>
+                </li>
+                <li class="item-lista">
+                    <abbr title="Entre em contato conosco">
+                        <a href="contato.html">
+                            Contato
+                        </a>
+                    </abbr>
+                </li>
+                <li class="item-lista">
+                    <abbr title="Doação">
+                        <a href="doacao.html">
+                            Doação
+                        </a>
+                    </abbr>
+                </li>
+            </ul>
+        </nav>
+        <button id="btn-alternar" class="alternar-tema" title="Alternar modo claro/escuro">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <button class="menu-alternar" title="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+    <main>
+        <section class="itens-artigos art1">
+            <article>
+                <h2>Transforme solidariedade em inclusão</h2>
+                <p>Ao doar para a CAPEDAC, você fortalece sonhos e dá voz a quem enfrenta barreiras todos os dias.
+                Juntos, podemos construir um Acre mais acessível, justo e acolhedor para todas as pessoas com deficiência.</p>
+            </article>
+        </section>
+
+        <section class="itens-artigos art2">
+            <article>
+                <h2>Sua doação transforma vidas.</h2>
+                <p>
+                Cada contribuição fortalece nossos projetos e garante mais oportunidades 
+                de esporte, educação e acessibilidade para pessoas com deficiência.
+                Com sua solidariedade, conseguimos realizar importantes projetos sociais, como:</p>
+                <ul class="lista-doacao">
+                    <li> Compra e doação de cadeiras de rodas</li>
+                    <li> Doação de cestas básicas (sacolões)</li>
+                    <li> Fornecimento de medicamentos não disponíveis na rede pública</li>
+                    <li> Projetos esportivos e de saúde</li>
+                </ul>
+                <button id="abrirPix">Doar via Pix</button>
+                <button id="abrirBanco">Doar via Conta</button>
+                <p>&#128591; Qualquer valor é bem-vindo e transforma realidades!</p>
+                
+            </article>
+        </section>
+
+        <section class="itens-artigos art1">
+            <article>
+                <h2>Doe Pessoalmente</h2>
+                <p>
+                    Além do Pix e da conta bancária, você pode fortalecer a inclusão 
+                    vindo até nossa sede e contribuindo de forma presencial. 
+                    Cada visita é também um gesto de apoio e proximidade à causa da CAPEDAC.
+                </p>
+                <button id="abrirMapa">Quero Visitar</button>
+            </article>
+        </section>
+
+        <div class="modal" id="modalPix">
+            <div class="modal-conteudo conteudo2">
+                <span class="fechar">&times;</span>
+                <h3>Doação via Pix</h3>
+                <img src="../midias/qrcodecapedac.jpeg" alt="QR Code Pix">
+                <p>Chave Pix: <strong>capedac.ac@gmail.com</strong></p>
+            </div>
+        </div>
+
+        <div class="modal" id="modalBanco">
+            <div class="modal-conteudo conteudo2">
+                <span class="fechar">&times;</span>
+                <h3>Conta Bancária</h3>
+                <p>Banco:<strong> 001 - Banco do Brasil</strong></p>
+                <p>Agência:<strong> 2359-0</strong></p>
+                <p>Conta Corrente:<strong> 58464-9</strong></p>
+                <p>Titular:<strong> CAPEDAC - Centro de Apoio à Pessoa com Deficiência Física do Acre</strong></p>
+            </div>
+        </div>
+
+        
+        <div class="modal" id="modalMapa">
+        <div class="modal-conteudo conteudo1">
+            <span class="fechar">&times;</span>
+            <h3>Encontre-nos</h3>
+            <p>Venha até nossa sede e faça sua doação diretamente.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5007.845660892335!2d-67.8088730301411!3d-9.97513340124002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f8d007e04f36d%3A0x29e0f89f30af51e8!2sCAPEDAC%20-%20Centro%20de%20apoio%20as%20pessoas%20com%20defici%C3%AAncia%20f%C3%ADsica%20do%20Acre!5e0!3m2!1spt-BR!2sbr!4v1757624610609!5m2!1spt-BR!2sbr" width="100%" height="250" style=" border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <section class="rodape-sobre">
+                <img src="../midias/capedac512-512.png" alt="Logo da CAPEDAC" class="logo-rodape">
+                <p>Centro de Apoio à Pessoa com Deficiência do Acre. <br>
+                Promovendo inclusão, autonomia e oportunidades.</p>
+            </section>
+            <section class="rodape-links">
+                <nav>
+                    <h3><i class="fas fa-link"></i> Links Rápidos</h3>
+                    <ul>
+                        <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="sobre.html" rel="author"><i class="fas fa-info-circle"></i> Quem Somos</a></li>
+                        <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Notícias</a></li>
+                        <li><a href="projetos.html"><i class="fas fa-lightbulb"></i> Projetos</a></li>
+                        <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+                        <li><a href="doacao.html"><i class="fas fa-hand-holding-heart"></i> Doação</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="rodape-contato">
+                <h3><i class="fas fa-envelope"></i> Contato</h3>
+                <p>Email: <a href="mailto:capedac.ac@gmail.com"><i class="fas fa-envelope-open"></i> capedac.ac@gmail.com</a></p>
+                <p>Telefone: <a href="tel:+5568992076114"><i class="fas fa-phone"></i> (68) 99207-6114</a></p>
+                <div class="redes-sociais">
+                    <a href="https://wa.me/5568992076114?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%2C%20quero%20saber%20mais%20sobre%20a%20CAPEDAC%20%E2%99%BF%21" target="_blank" rel="noopener noreferrer">
+                    <img src="../midias/whatsapp.svg" alt="Logo do WhatsApp">
+                    </a>
+                    <a href="https://m.facebook.com/Capedacoficial/" rel="noopener noreferrer" target="_blank">
+                    <img src="../midias/facebook.svg" alt="Logo do Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/capedac_oficial" target="_blank" rel="noopener noreferrer">
+                        <img src="../midias/instagram.svg" alt="Logo do Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/@capedac3288" target="_blank" rel="noopener noreferrer">
+                        <img src="../midias/youtube.svg" alt="Logo do YouTube">
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <section class="rodape-direitos">
+            <p>&copy; <span id="ano"></span> CAPEDAC - Todos os direitos reservados.</p>
+        </section>
+    </footer>
+
+    <!-- VLibras Plugin -->
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="../scripts/capedac.js"></script>
+</body>
+</html>
